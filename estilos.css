@@ -9,7 +9,7 @@
 
 }
 
-/* Estilos generales */
+/* Estilos generales inicio */
 body{
     background-color: rgb(245, 245, 245);
     min-height: 100vh;
@@ -40,45 +40,28 @@ section {
     font-size: 32px;
 }
 
-/* Estilos del menu principal */
-.menu{
-    background-color: black;
-    padding: 10px 0px;
-    height: 50px;
-    position: sticky;
-    top: 0;
+iframe {
+    max-width: 100%;
+}
+/* Estilos generales fin */
+
+
+/* Estilos del menu principal inicio*/
+.bg-dark {
+    background-color: rgb(36, 36, 36) !important;
+}
+
+.navbar {
+    padding: 0.5rem 0;
 }
 
 .menu__logo {
     height: 50px;
     float: left;
 }
+/* Estilos del menu principal fin */
 
-.menu__nav{
-    float: right;
-    line-height: 50px;
-}
-
-.menu__nav a{
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-}
-
-.menu__nav a:hover{
-    color: #96cf41;
-}
-
-.menu__nav ul li{
-    display: inline;
-    padding: 0 0 0 20px;
-}
-
-iframe {
-    max-width: 100%;
-}
-
-/* Estilos del banner de portada */
-
+/* Estilos del banner de portada inicio */
 .banner {
     height: 400px;
     background-image: url(images/banner1.jpg);
@@ -94,34 +77,22 @@ iframe {
     padding: 0px;
 }
 
-/* .banner_body {
-    width: 100%;
-} */
-
 .banner__titulo {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
+/* Estilos del banner de portada fin */
 
-/* Estilo de sección con fondo solido */
+
+/* Estilo de sección con fondo solido inicio*/
 
 .sectionType2 {
     background-color: rgb(231, 231, 231);
 }
+/* Estilo de sección con fondo solido fin*/
 
-/* Estilos de las tarjetas de los cursos */
-
-/* .courses{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-} */
-
+/* Estilo de cards inicio*/
 .card{
-/*     width: 32%;
-    min-width: auto; */
     border: solid 1px rgb(221, 221, 221);
     border-radius: 5px;
     margin-bottom: 2rem;
@@ -130,7 +101,7 @@ iframe {
 }
 
 .card:hover {
-    z-index: 9;
+    z-index: 8;
     transform: scale(1.1);
 }
 
@@ -165,10 +136,10 @@ iframe {
 .card__precio{
     font-weight: 700;
 }
+/* Estilo de cards fin*/
 
 
-
-/* Estilos de sección sobre nosotros */
+/* Estilos de sección sobre nosotros inicio */
 .sobreNosotros{
     display: flex;
     align-items: center;
@@ -193,8 +164,10 @@ iframe {
 .sobreNosotros__body__descripcion{
     margin-bottom: 2rem;
 }
+/* Estilos de sección sobre nosotros fin */
 
-/* Estilos del footer */
+
+/* Estilos del footer inicio */
 footer {
     background-color: black;
     color: white;
@@ -221,9 +194,10 @@ footer {
     margin-right: 10px;
     margin-top: 20px;
 }
+/* Estilos del footer fin */
 
-/* Estilos del formulario */
 
+/* Estilos del formulario inicio */
 .form {
     max-width: 500px;
     margin-right: auto;
@@ -250,18 +224,7 @@ form{
 .form__btn{
     margin-top: 25px;
 }
-
-
-/* .courses {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 15px;
-}
-
-.card {
-    align-self: stretch;
-    width: 100%;
-} */
+/* Estilos del formulario fin */
 
 @media screen and (max-width: 600px) {
     .courses {
@@ -303,8 +266,6 @@ form{
         align-self: stretch;
         width: 100%;
     }
-
-
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -322,7 +283,6 @@ form{
 
     .container {
         max-width: 90%;
-/*         margin: 30px; */
         margin-right: auto;
         margin-left: auto;
     }
@@ -337,8 +297,6 @@ form{
         align-self: stretch;
         width: 100%;    
     }
-
-
 }
 
 @media screen and (min-width: 901px) {
@@ -356,10 +314,8 @@ form{
 
     .container {
         max-width: 90%;
-/*         margin: 30px; */
         margin-right: auto;
         margin-left: auto;
     }
 
 }
-
