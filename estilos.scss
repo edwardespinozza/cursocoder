@@ -1,0 +1,331 @@
+$color1: #7a5cf4;
+$color2: #412b98;
+$color3: #96cf41;
+
+
+*{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Estilos generales inicio */
+body{
+    background-color: rgb(245, 245, 245);
+    min-height: 100vh;
+}
+
+.btn {
+    margin-bottom: 15px;
+    background-color: $color1;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: block;
+}
+
+.btn:hover {
+    background-color: $color2;
+    color: white;
+}
+
+a:hover {
+    color: $color1 !important;
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.tituloDeSeccion{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 32px;
+}
+
+iframe {
+    max-width: 100%;
+}
+/* Estilos generales fin */
+
+
+/* Estilos del menu principal inicio*/
+.bg-dark {
+    background-color: rgb(36, 36, 36) !important;
+}
+
+.navbar {
+    padding: 0.5rem 0;
+}
+
+.menu__logo {
+    height: 50px;
+    float: left;
+}
+/* Estilos del menu principal fin */
+
+/* Estilos del banner de portada inicio */
+.banner {
+    height: 400px;
+    background-image: url(images/banner1.jpg);
+    background-size: cover;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.cuerpo {
+    padding: 0px;
+}
+
+.banner__titulo {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+/* Estilos del banner de portada fin */
+
+
+/* Estilo de sección con fondo solido inicio*/
+
+.sectionType2 {
+    background-color: rgb(231, 231, 231);
+}
+/* Estilo de sección con fondo solido fin*/
+
+/* Estilo de cards inicio*/
+.card{
+    border: solid 1px rgb(221, 221, 221);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    transition: 1s;
+}
+
+.card:hover {
+    z-index: 8;
+    transform: scale(1.1);
+}
+
+.card__portada__imagen{
+    object-fit: cover;
+    width: 100%;
+}
+
+.card__body{
+    padding: 15px;
+}
+
+.card__titulo{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.card__titulo a{
+    color: black;
+}
+
+.card__autor{
+    margin-bottom: 10px;
+}
+
+.card__autor span{
+    color: $color1;
+    font-weight: 600;
+}
+
+.card__precio{
+    font-weight: 700;
+}
+/* Estilo de cards fin*/
+
+
+/* Estilos de sección sobre nosotros inicio */
+.sobreNosotros{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sobrenosotros {
+    background-image: linear-gradient(to left, $color1,
+     rgb(86, 159, 226)
+    );
+}
+
+.sobreNosotros__item{
+    width: 45%;
+    align-items: center;
+}
+
+.sobreNosotros__body h2{
+    text-align: left !important;
+}
+
+.sobreNosotros__body__descripcion{
+    margin-bottom: 2rem;
+}
+/* Estilos de sección sobre nosotros fin */
+
+
+/* Estilos del footer inicio */
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer__logo{
+    float: left;
+}
+
+.footer__rs{
+    float: right;
+}
+
+.footer__rs i{
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+/* Estilos del footer fin */
+
+
+/* Estilos del formulario inicio */
+.form {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form{
+    margin-top: 30px;
+}
+
+.form__input {
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+::placeholder {
+    color: rgb(184, 184, 184);
+}
+
+.form__btn{
+    margin-top: 25px;
+}
+/* Estilos del formulario fin */
+
+@media screen and (max-width: 600px) {
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-column-gap: 15px;
+    }
+    
+    .card {
+        align-self: stretch;
+        width: 100%;
+    }
+    .menu__nav {
+        display: none;
+    }
+
+    .container {
+        margin: 0 15px;
+    }
+
+    .sobreNosotros {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-column-gap: 15px;
+    }
+
+    .sobreNosotros__item {
+        align-self: stretch;
+        width: 100%;    
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-column-gap: 15px;
+    }
+
+    .footer__item {
+        align-self: stretch;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 15px;
+    }
+
+    .card {
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .sobreNosotros {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-column-gap: 15px;
+    }
+
+    .sobreNosotros__item {
+        align-self: stretch;
+        width: 100%;    
+    }
+}
+
+@media screen and (min-width: 901px) {
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 15px;
+    }
+
+    .card {
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
