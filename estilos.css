@@ -6,29 +6,13 @@
   text-decoration: none;
   border: none;
   outline: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Estilos generales inicio */
 body {
-  background-color: rgb(245, 245, 245);
+  background-color: whitesmoke;
   min-height: 100vh;
-}
-
-.btn {
-  margin-bottom: 15px;
-  background-color: #7a5cf4;
-  padding: 10px 20px;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 5px;
-  display: block;
-}
-
-.btn:hover {
-  background-color: #412b98;
-  color: white;
 }
 
 a:hover {
@@ -53,7 +37,7 @@ iframe {
 /* Estilos generales fin */
 /* Estilos del menu principal inicio*/
 .bg-dark {
-  background-color: rgb(36, 36, 36) !important;
+  background-color: #242424 !important;
 }
 
 .navbar {
@@ -72,10 +56,16 @@ iframe {
   background-image: url(images/banner1.jpg);
   background-size: cover;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .cuerpo {
@@ -90,27 +80,32 @@ iframe {
 /* Estilos del banner de portada fin */
 /* Estilo de sección con fondo solido inicio*/
 .sectionType2 {
-  background-color: rgb(231, 231, 231);
+  background-color: #e7e7e7;
 }
 
 /* Estilo de sección con fondo solido fin*/
 /* Estilo de cards inicio*/
 .card {
-  border: solid 1px rgb(221, 221, 221);
-  border-radius: 5px;
+  border: solid 1px #dddddd;
+  border-radius: 25px;
   margin-bottom: 2rem;
   background-color: #fff;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 .card:hover {
   z-index: 8;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card__portada__imagen {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  border-radius: 25px;
+  border-bottom-left-radius: 0;
 }
 
 .card__body {
@@ -143,18 +138,27 @@ iframe {
 /* Estilo de cards fin*/
 /* Estilos de sección sobre nosotros inicio */
 .sobreNosotros {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #sobrenosotros {
-  background-image: linear-gradient(to left, #7a5cf4, rgb(86, 159, 226));
+  background-image: -webkit-gradient(linear, right top, left top, from(#7a5cf4), to(#569fe2));
+  background-image: linear-gradient(to left, #7a5cf4, #569fe2);
 }
 
 .sobreNosotros__item {
   width: 45%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sobreNosotros__body h2 {
@@ -175,8 +179,12 @@ footer {
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -210,13 +218,25 @@ form {
   width: 100%;
   display: block;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
+::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+
+:-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+::-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
 ::placeholder {
-  color: rgb(184, 184, 184);
+  color: #b8b8b8;
 }
 
 .form__btn {
@@ -224,89 +244,68 @@ form {
 }
 
 /* Estilos del formulario fin */
+/* Estilos responsive con mixin inicio*/
 @media screen and (max-width: 600px) {
-  .courses {
+  .courses, .sobreNosotros, .footer {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(1fr);
+    -ms-grid-columns: ()[1fr];
+        grid-template-columns: repeat(1fr);
     grid-column-gap: 15px;
   }
-
-  .card {
-    align-self: stretch;
+  .card, .sobreNosotros__item, .footer__item {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
     width: 100%;
   }
-
-  .menu__nav {
-    display: none;
-  }
-
-  .container {
-    margin: 0 15px;
-  }
-
-  .sobreNosotros {
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-column-gap: 15px;
-  }
-
-  .sobreNosotros__item {
-    align-self: stretch;
-    width: 100%;
-  }
-
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-column-gap: 15px;
-  }
-
-  .footer__item {
-    align-self: stretch;
-    width: 100%;
+  .banner {
+    background-position: right;
   }
 }
+
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .courses {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 15px;
   }
-
-  .card {
-    align-self: stretch;
+  .sobreNosotros {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 15px;
+  }
+  .card, .sobreNosotros__item {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
     width: 100%;
   }
-
   .container {
     max-width: 90%;
     margin-right: auto;
     margin-left: auto;
   }
-
-  .sobreNosotros {
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-column-gap: 15px;
-  }
-
-  .sobreNosotros__item {
-    align-self: stretch;
-    width: 100%;
-  }
 }
+
 @media screen and (min-width: 901px) {
   .courses {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 15px;
   }
-
   .card {
-    align-self: stretch;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
     width: 100%;
   }
-
   .container {
     max-width: 90%;
     margin-right: auto;
@@ -314,4 +313,59 @@ form {
   }
 }
 
+/* Estilos responsive con mixin fin*/
+/* Estilos para RS usanso maps inicio */
+.fa-facebook {
+  color: #3a5795;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-instagram {
+  color: #C25E30;
+}
+
+/* Estilos para RS usando maps fin */
+/* Estilos para diferenciar botones usando extend inicio */
+.btn, .btn--dark, .btn--light {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  display: block;
+}
+
+.btn:hover, .btn--dark:hover, .btn--light:hover {
+  background-color: #412b98;
+  color: white;
+  border: solid 2px #412b98;
+}
+
+.btn--dark {
+  color: white;
+  background-color: #7a5cf4;
+  border: solid 2px #7a5cf4;
+}
+
+.btn--light {
+  color: #7a5cf4;
+  border: solid 2px #7a5cf4;
+}
+
+/* Estilos para diferenciar botones usando extend fin */
+/* Estilos breadcrum inicio */
+.breadcrumb--bar {
+  background-color: #e9ecef;
+}
+/* Modificando h1 con mixin */
+.h1__invertido {
+  color: white;
+}
+
+.p__invertido {
+  color: white;
+}
 /*# sourceMappingURL=estilos.css.map */

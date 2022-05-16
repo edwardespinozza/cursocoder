@@ -2,38 +2,25 @@ $color1: #7a5cf4;
 $color2: #412b98;
 $color3: #96cf41;
 
+$radius1: 25px;
 
-*{
+* {
     margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	border: none;
-	outline: none;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Estilos generales inicio */
-body{
+body {
     background-color: rgb(245, 245, 245);
     min-height: 100vh;
 }
 
-.btn {
-    margin-bottom: 15px;
-    background-color: $color1;
-    padding: 10px 20px;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
-    display: block;
-}
 
-.btn:hover {
-    background-color: $color2;
-    color: white;
-}
 
 a:hover {
     color: $color1 !important;
@@ -44,7 +31,7 @@ section {
     padding: 80px 0;
 }
 
-.tituloDeSeccion{
+.tituloDeSeccion {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 32px;
@@ -53,6 +40,7 @@ section {
 iframe {
     max-width: 100%;
 }
+
 /* Estilos generales fin */
 
 
@@ -69,6 +57,7 @@ iframe {
     height: 50px;
     float: left;
 }
+
 /* Estilos del menu principal fin */
 
 /* Estilos del banner de portada inicio */
@@ -91,20 +80,21 @@ iframe {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
+
 /* Estilos del banner de portada fin */
 
 
 /* Estilo de sección con fondo solido inicio*/
-
 .sectionType2 {
     background-color: rgb(231, 231, 231);
 }
+
 /* Estilo de sección con fondo solido fin*/
 
 /* Estilo de cards inicio*/
-.card{
+.card {
     border: solid 1px rgb(221, 221, 221);
-    border-radius: 5px;
+    border-radius: $radius1;
     margin-bottom: 2rem;
     background-color: #fff;
     transition: 1s;
@@ -115,42 +105,45 @@ iframe {
     transform: scale(1.1);
 }
 
-.card__portada__imagen{
+.card__portada__imagen {
     object-fit: cover;
     width: 100%;
+    border-radius: $radius1;
+    border-bottom-left-radius: 0;
 }
 
-.card__body{
+.card__body {
     padding: 15px;
 }
 
-.card__titulo{
+.card__titulo {
     font-size: 18px;
     margin-bottom: 10px;
     color: black;
 }
 
-.card__titulo a{
+.card__titulo a {
     color: black;
 }
 
-.card__autor{
+.card__autor {
     margin-bottom: 10px;
 }
 
-.card__autor span{
+.card__autor span {
     color: $color1;
     font-weight: 600;
 }
 
-.card__precio{
+.card__precio {
     font-weight: 700;
 }
+
 /* Estilo de cards fin*/
 
 
 /* Estilos de sección sobre nosotros inicio */
-.sobreNosotros{
+.sobreNosotros {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,22 +151,22 @@ iframe {
 
 #sobrenosotros {
     background-image: linear-gradient(to left, $color1,
-     rgb(86, 159, 226)
-    );
+            rgb(86, 159, 226));
 }
 
-.sobreNosotros__item{
+.sobreNosotros__item {
     width: 45%;
     align-items: center;
 }
 
-.sobreNosotros__body h2{
+.sobreNosotros__body h2 {
     text-align: left !important;
 }
 
-.sobreNosotros__body__descripcion{
+.sobreNosotros__body__descripcion {
     margin-bottom: 2rem;
 }
+
 /* Estilos de sección sobre nosotros fin */
 
 
@@ -185,25 +178,26 @@ footer {
     padding-bottom: 50px;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.footer__logo{
+.footer__logo {
     float: left;
 }
 
-.footer__rs{
+.footer__rs {
     float: right;
 }
 
-.footer__rs i{
+.footer__rs i {
     font-size: 25px;
     margin-right: 10px;
     margin-top: 20px;
 }
+
 /* Estilos del footer fin */
 
 
@@ -214,7 +208,7 @@ footer {
     margin-left: auto;
 }
 
-form{
+form {
     margin-top: 30px;
 }
 
@@ -222,7 +216,7 @@ form{
     width: 100%;
     display: block;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: $radius1;
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -231,62 +225,45 @@ form{
     color: rgb(184, 184, 184);
 }
 
-.form__btn{
+.form__btn {
     margin-top: 25px;
 }
+
 /* Estilos del formulario fin */
 
+/* Estilos responsive con mixin inicio*/
+
+@mixin grid-responsive ($display, $grid-template-columns, $grid-column-gap) {
+    display: $display;
+    grid-template-columns: $grid-template-columns;
+    grid-column-gap: $grid-column-gap;
+}
+
 @media screen and (max-width: 600px) {
-    .courses {
-        display: grid;
-        grid-template-columns: repeat(1fr);
-        grid-column-gap: 15px;
+    .courses, .sobreNosotros, .footer {
+        @include grid-responsive (grid, repeat(1fr), 15px);
     }
-    
-    .card {
+
+    .card, .sobreNosotros__item, .footer__item {
         align-self: stretch;
         width: 100%;
     }
-    .menu__nav {
-        display: none;
-    }
-
-    .container {
-        margin: 0 15px;
-    }
-
-    .sobreNosotros {
-        display: grid;
-        grid-template-columns: repeat(1fr);
-        grid-column-gap: 15px;
-    }
-
-    .sobreNosotros__item {
-        align-self: stretch;
-        width: 100%;    
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(1fr);
-        grid-column-gap: 15px;
-    }
-
-    .footer__item {
-        align-self: stretch;
-        width: 100%;
+    .banner {
+        background-position: right;
     }
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
 
     .courses {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 15px;
+        @include grid-responsive (grid, repeat(2, 1fr), 15px);
     }
 
-    .card {
+    .sobreNosotros {
+        @include grid-responsive (grid, repeat(1, 1fr), 15px);
+    }
+
+    .card, .sobreNosotros__item {
         align-self: stretch;
         width: 100%;
     }
@@ -295,26 +272,13 @@ form{
         max-width: 90%;
         margin-right: auto;
         margin-left: auto;
-    }
-
-    .sobreNosotros {
-        display: grid;
-        grid-template-columns: repeat(1fr);
-        grid-column-gap: 15px;
-    }
-
-    .sobreNosotros__item {
-        align-self: stretch;
-        width: 100%;    
     }
 }
 
 @media screen and (min-width: 901px) {
 
     .courses {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 15px;
+        @include grid-responsive (grid, repeat(3, 1fr), 15px);
     }
 
     .card {
@@ -327,5 +291,69 @@ form{
         margin-right: auto;
         margin-left: auto;
     }
+}
+/* Estilos responsive con mixin fin*/
 
+
+/* Estilos para RS usanso maps inicio */
+$redes: (facebook: #3a5795,
+    twitter: #55acee,
+    instagram: #C25E30);
+
+@each $red,
+$color in $redes {
+    .fa-#{$red} {
+        color: $color;
+    }
+}
+
+/* Estilos para RS usando maps fin */
+
+/* Estilos para diferenciar botones usando extend inicio */
+.btn {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: $radius1;
+    display: block;
+}
+
+.btn:hover {
+    background-color: $color2;
+    color: white;
+    border: solid 2px $color2;
+}
+
+.btn--dark {
+    @extend.btn;
+    color: white;
+    background-color: $color1;
+    border: solid 2px $color1;
+}
+
+.btn--light {
+    @extend.btn;
+    color: $color1;
+    border: solid 2px $color1;
+}
+
+/* Estilos para diferenciar botones usando extend fin */
+
+/* Estilos breadcrum inicio */
+.breadcrumb--bar {
+    background-color: #e9ecef;
+}
+/*# sourceMappingURL=estilos.css.map */
+
+/* Modificando h1 con mixin */
+@mixin color-invertido {
+        color: white;
+}
+
+.h1__invertido {
+    @include color-invertido();
+}
+.p__invertido {
+    @include color-invertido();
 }
