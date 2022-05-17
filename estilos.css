@@ -246,14 +246,18 @@ form {
 /* Estilos del formulario fin */
 /* Estilos responsive con mixin inicio*/
 @media screen and (max-width: 600px) {
-  .courses, .sobreNosotros, .footer {
+  .courses,
+  .sobreNosotros,
+  .footer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: ()[1fr];
         grid-template-columns: repeat(1fr);
     grid-column-gap: 15px;
   }
-  .card, .sobreNosotros__item, .footer__item {
+  .card,
+  .sobreNosotros__item,
+  .footer__item {
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
@@ -279,7 +283,8 @@ form {
         grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 15px;
   }
-  .card, .sobreNosotros__item {
+  .card,
+  .sobreNosotros__item {
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
@@ -360,7 +365,13 @@ form {
 .breadcrumb--bar {
   background-color: #e9ecef;
 }
-/* Modificando h1 con mixin */
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+/* Estilos breadcrum fin */
+/* Modificando h1 con mixin inicio */
 .h1__invertido {
   color: white;
 }
@@ -368,4 +379,6 @@ form {
 .p__invertido {
   color: white;
 }
+
+/* Modificando h1 con fin */
 /*# sourceMappingURL=estilos.css.map */

@@ -240,14 +240,20 @@ form {
 }
 
 @media screen and (max-width: 600px) {
-    .courses, .sobreNosotros, .footer {
+
+    .courses,
+    .sobreNosotros,
+    .footer {
         @include grid-responsive (grid, repeat(1fr), 15px);
     }
 
-    .card, .sobreNosotros__item, .footer__item {
+    .card,
+    .sobreNosotros__item,
+    .footer__item {
         align-self: stretch;
         width: 100%;
     }
+
     .banner {
         background-position: right;
     }
@@ -263,7 +269,8 @@ form {
         @include grid-responsive (grid, repeat(1, 1fr), 15px);
     }
 
-    .card, .sobreNosotros__item {
+    .card,
+    .sobreNosotros__item {
         align-self: stretch;
         width: 100%;
     }
@@ -292,6 +299,7 @@ form {
         margin-left: auto;
     }
 }
+
 /* Estilos responsive con mixin fin*/
 
 
@@ -344,16 +352,26 @@ $color in $redes {
 .breadcrumb--bar {
     background-color: #e9ecef;
 }
-/*# sourceMappingURL=estilos.css.map */
 
-/* Modificando h1 con mixin */
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+/* Estilos breadcrum fin */
+
+/* Modificando h1 con mixin inicio */
 @mixin color-invertido {
-        color: white;
+    color: white;
 }
 
 .h1__invertido {
     @include color-invertido();
 }
+
 .p__invertido {
     @include color-invertido();
 }
+
+/* Modificando h1 con fin */
+
+/*# sourceMappingURL=estilos.css.map */
