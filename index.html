@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>Arcux</title>
     <meta name="description" content="Cursos online para el sector construcción">
-    <meta name="keywords" content="arquitectura, cursos online, cursos de cosntrucción, arquitectura digital, cursos de arquitectura, cursos de ingenieria">
+    <meta name="keywords"
+        content="arquitectura, cursos online, cursos de cosntrucción, arquitectura digital, cursos de arquitectura, cursos de ingenieria">
 </head>
 
 <body>
@@ -60,11 +61,13 @@
     <section class="cuerpo">
 
         <!-- Banner con foto de portada inicio -->
-        <section class="banner">
+        <section class="row banner">
             <div class="container ">
-                <div class="banner_body animate__animated animate__fadeInLeft">
-                    <h2 class="banner__titulo">Formación online para la construcción</h2>
-                    <button class="btn btn--dark">Registrate ahora</button>
+                <div class="col-sm-6">
+                    <div class="banner_body animate__animated animate__fadeInLeft">
+                        <h2 class="banner__titulo space-botton1">Formación online para la construcción</h2>
+                        <a class="btn btn--dark" href="pages/cursos.html">Ver cursos</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,18 +75,18 @@
 
         <!-- Sección de los cursos de la plataforma inicio -->
         <section class="sectionType1">
-            <div class="container">
+            <div class="container ">
                 <h2 class="tituloDeSeccion">Nuestros cursos</h2>
-                <div class="courses">
+                <div class="courses wow animate__animated animate__fadeInLeft">
 
                     <div class="card">
-                        <a class="card__portada" href="#">
+                        <a class="card__portada" href="pages/proximamente.html">
                             <img class="card__portada__imagen" src="images/curso1.jpg"
                                 alt="Imagen de portada del curso">
                         </a>
                         <div class="card__body">
                             <h4 class="card__titulo">
-                                <a href="#">Análisis y Estrategias de control solar</a>
+                                <a href="pages/proximamente.html">Análisis y Estrategias de control solar</a>
                             </h4>
                             <p class="card__autor">Un curso de <span>Aileen Mendoza Perez</span></p>
                             <p class="card__precio">USD 19.00</p>
@@ -91,13 +94,13 @@
                     </div>
 
                     <div class="card">
-                        <a class="card__portada" href="#">
+                        <a class="card__portada" href="pages/proximamente.html">
                             <img class="card__portada__imagen" src="images/curso2.jpg"
                                 alt="Imagen de portada del curso">
                         </a>
                         <div class="card__body">
                             <h4 class="card__titulo">
-                                <a href="#">Análisis y Estrategias de control solar</a>
+                                <a href="pages/proximamente.html">Análisis y Estrategias de control solar</a>
                             </h4>
                             <p class="card__autor">Un curso de <span>Aileen Mendoza Perez</span></p>
                             <p class="card__precio">USD 19.00</p>
@@ -106,13 +109,13 @@
                     </div>
 
                     <div class="card">
-                        <a class="card__portada" href="#">
+                        <a class="card__portada" href="pages/proximamente.html">
                             <img class="card__portada__imagen" src="images/curso3.jpg"
                                 alt="Imagen de portada del curso">
                         </a>
                         <div class="card__body">
                             <h4 class="card__titulo">
-                                <a href="#">Análisis y Estrategias de control solar</a>
+                                <a href="pages/proximamente.html">Análisis y Estrategias de control solar</a>
                             </h4>
                             <p class="card__autor">Un curso de <span>Aileen Mendoza Perez</span></p>
                             <p class="card__precio">USD 19.00</p>
@@ -121,24 +124,38 @@
                     </div>
 
                 </div>
-                <button class="btn btn--light">Ver más cursos</button>
+                <a class="btn btn--light" href="pages/cursos.html">Ver más cursos</a>
             </div>
         </section>
         <!-- Sección de los cursos de la plataforma fin -->
 
+        <!-- solicitar curso inicio -->
+        <section class="container sinpaddingtop">
+            <div class="row solicitar-curso-div wow animate__animated animate__fadeInLeft">
+                <div class="col-sm-6 solicitar-curso solicitar-curso1">
+                    <div class="solicitar-curso-gradient"></div>
+                </div>
+                <div class="col-sm-6 solicitar-curso solicitar-curso2">
+                    <div>
+                        <h3 class="invertido">¿No encuentras lo que necesitas?</h3>
+                        <p class="invertido">¡Solicita el curso que necesitas y lo crearemos para ti!</p>
+                        <a class="btn btn--dark" href="pages/solicitar-curso.html">Solicitar curso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- solicitar curso fin -->
 
         <!-- Sección sobre la empresa inicio -->
         <section class="sectionType2" id="sobrenosotros">
             <div class="container sobreNosotros">
-                <div class="sobreNosotros__item sobreNosotros__body">
-                    <h2 class="tituloDeSeccion h1__invertido">Sobre nosotros</h2>
-                    <p class="sobreNosotros__body__descripcion p__invertido">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Saepe maiores iste pariatur nulla quas impedit aliquam distinctio adipisci, molestiae nihil.
-                        Earum voluptatum minus fugiat cumque illo. Dolorem autem facere temporibus!</p>
-
-                    <button class="btn btn--dark">Ver más</button>
+                <div class="sobreNosotros__item sobreNosotros__body wow animate__animated animate__fadeInLeft">
+                    <h2 class="tituloDeSeccion invertido">Sobre nosotros</h2>
+                    <p class="sobreNosotros__body__descripcion invertido">Desde 2018, ARCUX viene revolucionando la formación online para el sector de la construcción. Hemos logrado crear una innovadora oferta de educación continua para arquitectos, ingenieros y diseñadores. Nuestros cursos son elaborados con profesionales lideres de diferentes partes del mundo y son producidos con esmero por nuestro equipo para lograr contenidos de alto valor educativo y excelente calidad audiovisual.
+                    </p>
+                    <a class="btn btn--dark" href="pages/sobre-nosotros.html">Ver más</a>
                 </div>
-                <div class="sobreNosotros__item sobreNosotros__video">
+                <div class="sobreNosotros__item sobreNosotros__video wow animate__animated animate__fadeInRight">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/DAjYLh9Igz8"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -152,40 +169,40 @@
         <section class="sectionType1">
             <div class="container">
                 <h2 class="tituloDeSeccion">Nuestras escuelas</h2>
-                <div class="courses">
+                <div class="courses wow animate__animated animate__fadeInUp">
 
                     <div class="card">
-                        <a class="card__portada" href="#">
+                        <a class="card__portada" href="pages/esc-arquitectura.html">
                             <img class="card__portada__imagen" src="images/escuela1.jpg"
                                 alt="Imagen de portada de la escuela">
                         </a>
                         <div class="card__body">
                             <h4 class="card__titulo">
-                                <a href="#">Escuela de Arquitectura</a>
+                                <a href="pages/esc-arquitectura.html">Escuela de Arquitectura</a>
                             </h4>
                         </div>
                     </div>
 
                     <div class="card">
-                        <a class="card__portada" href="#">
+                        <a class="card__portada" href="pages/esc-ingenieria.html">
                             <img class="card__portada__imagen" src="images/escuela2.jpg"
                                 alt="Imagen de portada de la escuela">
                         </a>
                         <div class="card__body">
                             <h4 class="card__titulo">
-                                <a href="#">Escuela de Ingenieria</a>
+                                <a href="pages/esc-ingenieria.html">Escuela de Ingenieria</a>
                             </h4>
                         </div>
                     </div>
 
                     <div class="card">
-                        <a class="card__portada" href="#">
+                        <a class="card__portada" href="pages/esc-interiorismo.html">
                             <img class="card__portada__imagen" src="images/escuela3.jpg"
                                 alt="Imagen de portada de la escuela">
                         </a>
                         <div class="card__body">
                             <h4 class="card__titulo">
-                                <a href="#">Escuela de Interiorismo</a>
+                                <a href="pages/esc-interiorismo.html">Escuela de Interiorismo</a>
                             </h4>
                         </div>
                     </div>
@@ -202,17 +219,39 @@
     <footer>
         <div class="container">
             <div class="footer">
-                <div class="footer__item footer__logo">
-                    <img src="images/Arcux logo horizontal - copia.png" alt="logo-arcux" height="40px">
+                <div class="footer__item footer__logo space-botton1">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../images/Arcux logo horizontal - copia.png" alt="logo-arcux" class="menu__logo">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sobre-nosotros.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/escuelas.html">Escuelas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer__item footer__rs">
                     <p>Siguenos en redes sociales:</p>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <a href="https://www.facebook.com/arcux.net/">
+                        <i class="fa-brands fa-facebook scale"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arcux_arquitectura/">
+                        <i class="fa-brands fa-instagram scale"></i>
+                    </a>
+                    <a href="https://twitter.com/arcux/">
+                        <i class="fa-brands fa-twitter scale"></i>
+                    </a>
                 </div>
+
             </div>
-            <br>
             <p>Arcux SAC 2022. Todos los derechos reservados.</p>
         </div>
     </footer>
@@ -233,7 +272,6 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
     <!-- Scripts fin -->
-    
 
 </body>
 

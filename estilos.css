@@ -15,13 +15,31 @@ body {
   min-height: 100vh;
 }
 
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: gray;
+}
+
 a:hover {
   color: #7a5cf4 !important;
   text-decoration: none;
 }
 
-section {
-  padding: 80px 0;
+section, .section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.sinpaddingtop {
+  padding-top: 0;
 }
 
 .tituloDeSeccion {
@@ -32,6 +50,23 @@ section {
 
 iframe {
   max-width: 100%;
+}
+
+.scale:hover {
+  z-index: 8;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.space-botton1 {
+  margin-bottom: 30px;
+}
+
+.imagen-fondo-100vh {
+  height: 100vh;
+  background-image: url(https://img.freepik.com/foto-gratis/hombre-que-trabaja-oficina-papeles-portatil-mesa_1150-52080.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* Estilos generales fin */
@@ -47,12 +82,13 @@ iframe {
 .menu__logo {
   height: 50px;
   float: left;
+  margin-bottom: 0;
 }
 
 /* Estilos del menu principal fin */
 /* Estilos del banner de portada inicio */
 .banner {
-  height: 400px;
+  height: 600px;
   background-image: url(images/banner1.jpg);
   background-size: cover;
   color: #fff;
@@ -74,7 +110,18 @@ iframe {
 
 .banner__titulo {
   font-size: 3rem;
-  margin-bottom: 2rem;
+}
+
+.banner-esc-arquitectura {
+  background-image: url(images/escuela1.jpg);
+  height: auto;
+}
+
+.banner-gradient {
+  background-image: -webkit-gradient(linear, right black, );
+  background-image: linear-gradient(left black rgba(0, 0, 0, 0.134));
+  width: 100%;
+  background-image: linear-gradient(45deg, black, transparent);
 }
 
 /* Estilos del banner de portada fin */
@@ -96,16 +143,15 @@ iframe {
 
 .card:hover {
   z-index: 8;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .card__portada__imagen {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  border-radius: 25px;
-  border-bottom-left-radius: 0;
+  border-radius: 25px 25px 0 0;
 }
 
 .card__body {
@@ -199,28 +245,25 @@ footer {
 .footer__rs i {
   font-size: 25px;
   margin-right: 10px;
-  margin-top: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* Estilos del footer fin */
 /* Estilos del formulario inicio */
 .form {
   max-width: 500px;
-  margin-right: auto;
   margin-left: auto;
-}
-
-form {
-  margin-top: 30px;
+  margin-right: auto;
 }
 
 .form__input {
   width: 100%;
   display: block;
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 5px;
   margin-bottom: 20px;
-  margin-top: 10px;
+  border: solid 1px #dbdbdb;
 }
 
 ::-webkit-input-placeholder {
@@ -265,6 +308,12 @@ form {
   }
   .banner {
     background-position: right;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .imagen-fondo-100vh {
+    height: 50vh;
   }
 }
 
@@ -341,12 +390,9 @@ form {
   font-weight: 600;
   border-radius: 25px;
   display: block;
-}
-
-.btn:hover, .btn--dark:hover, .btn--light:hover {
-  background-color: #412b98;
-  color: white;
-  border: solid 2px #412b98;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .btn--dark {
@@ -360,6 +406,12 @@ form {
   border: solid 2px #7a5cf4;
 }
 
+.btn:hover, .btn--dark:hover, .btn--light:hover {
+  background-color: #412b98;
+  color: white !important;
+  border: solid 2px #412b98;
+}
+
 /* Estilos para diferenciar botones usando extend fin */
 /* Estilos breadcrum inicio */
 .breadcrumb--bar {
@@ -370,15 +422,69 @@ form {
   margin-bottom: 0;
 }
 
+.breadcrumb-item.active {
+  font-weight: 600;
+  color: #7a5cf4;
+}
+
 /* Estilos breadcrum fin */
-/* Modificando h1 con mixin inicio */
-.h1__invertido {
+/* Modificando color de texto con mixin inicio */
+.invertido {
   color: white;
 }
 
-.p__invertido {
-  color: white;
+.centrado {
+  text-align: center;
 }
 
-/* Modificando h1 con fin */
+/* Modificando color de texto con mixin fin */
+/* Estilo en seccion para solicitar cursos inicio */
+.solicitar-curso-div {
+  border-radius: 25px;
+  background-color: #262626;
+}
+
+.solicitar-curso {
+  height: 300px;
+}
+
+.solicitar-curso1 {
+  background-image: url(https://img.freepik.com/foto-gratis/hombre-que-trabaja-oficina-papeles-portatil-mesa_1150-52080.jpg?w=1800&t=st=1654210333~exp=1654210933~hmac=107cfc82c8030211f50b66353343edc1bc50ada95523db2f552af051203e2706);
+  background-position: center;
+  background-size: cover;
+  padding: 0px;
+  border-radius: 25px;
+}
+
+.solicitar-curso2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.solicitar-curso-gradient {
+  background-image: -webkit-gradient(linear, right top, left top, from(#262626), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, #262626, rgba(0, 0, 0, 0));
+  height: 300px;
+}
+
+/* Estilo en seccion para solicitar cursos fin */
+/* Estilos fondo de pantalla de proximamente inicio*/
+.imagen-fondo-proximamente {
+  background-image: url(images/fondo-proximamente_2.jpg);
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Estilos fondo de pantalla de proximamente fin*/
 /*# sourceMappingURL=estilos.css.map */
